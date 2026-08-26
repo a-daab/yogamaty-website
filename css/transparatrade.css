@@ -5,7 +5,7 @@
 .tt-hero {
   position: relative;
   padding: 10rem 2rem 6rem;
-  background: var(--black);
+  background: var(--orange-dark);
   color: var(--white);
   overflow: hidden;
 }
@@ -14,8 +14,8 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 30% 60%, rgba(204,85,0,0.2) 0%, transparent 60%),
-    radial-gradient(ellipse at 70% 20%, rgba(204,85,0,0.1) 0%, transparent 50%);
+    radial-gradient(ellipse at 30% 60%, rgba(204,85,0,0.35) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 20%, rgba(255,120,20,0.15) 0%, transparent 50%);
   pointer-events: none;
 }
 .tt-hero-inner {
@@ -28,7 +28,7 @@
   gap: 5rem;
   align-items: center;
 }
-.tt-hero-text .eyebrow { margin-bottom: 1.25rem; display: block; }
+.tt-hero-text .eyebrow { margin-bottom: 1.25rem; display: block; color: rgba(255,255,255,0.65); }
 .tt-hero-text h1 { color: var(--white); margin-bottom: 1.5rem; }
 .tt-hero-text p { color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-bottom: 2rem; }
 .tt-hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
@@ -86,7 +86,7 @@
 
 /* ---- Whitepaper ---- */
 .whitepaper-section {
-  background: var(--gray-100);
+  background: var(--white);
   padding: 6rem 2rem;
 }
 .whitepaper-inner {
@@ -104,13 +104,14 @@
   top: 6rem;
 }
 .wp-cover {
-  background: var(--black);
+  background: rgba(100,30,0,0.6);
   border-radius: 6px;
   padding: 3rem 2rem;
   text-align: center;
   margin-bottom: 1.5rem;
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.15);
 }
 .wp-cover::before {
   content: '';
@@ -280,7 +281,7 @@
 
 /* ---- Application Form ---- */
 .apply-section {
-  background: var(--black);
+  background: var(--orange-dark);
   padding: 6rem 2rem;
   color: var(--white);
 }
@@ -297,8 +298,8 @@
 .apply-header p { color: rgba(255,255,255,0.6); font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
 
 .apply-form {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(100,30,0,0.4);
+  border: 1px solid rgba(255,255,255,0.12);
   border-radius: 8px;
   padding: 3rem;
 }

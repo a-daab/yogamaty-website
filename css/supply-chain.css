@@ -5,7 +5,7 @@
 .sc-hero {
   position: relative;
   padding: 10rem 2rem 5rem;
-  background: var(--black);
+  background: var(--orange-dark);
   color: var(--white);
   overflow: hidden;
 }
@@ -13,7 +13,7 @@
   position: absolute;
   inset: -20%;
   background:
-    linear-gradient(135deg, rgba(10,10,10,0.92) 0%, rgba(204,85,0,0.15) 100%),
+    linear-gradient(135deg, rgba(100,30,0,0.92) 0%, rgba(163,68,0,0.5) 100%),
     url('assets/images/nepal-weaving.jpg') center/cover no-repeat;
   will-change: transform;
 }
@@ -23,7 +23,7 @@
   max-width: var(--max-width);
   margin: 0 auto;
 }
-.sc-hero-content .eyebrow { margin-bottom: 1rem; display: block; }
+.sc-hero-content .eyebrow { margin-bottom: 1rem; display: block; color: rgba(255,255,255,0.65); }
 .sc-hero-content h1 { color: var(--white); margin-bottom: 1rem; }
 .sc-hero-content p { color: rgba(255,255,255,0.7); font-size: 1.15rem; max-width: 580px; }
 
@@ -31,19 +31,19 @@
   display: inline-flex;
   align-items: center;
   gap: 0.625rem;
-  background: rgba(204,85,0,0.15);
-  border: 1px solid rgba(204,85,0,0.4);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
   padding: 0.5rem 1rem;
   border-radius: 2px;
   margin-top: 1.5rem;
   font-size: 0.8rem;
-  color: var(--orange);
+  color: var(--white);
   font-weight: 600;
   letter-spacing: 0.05em;
 }
 .batch-badge .dot {
   width: 8px; height: 8px;
-  background: var(--orange);
+  background: var(--white);
   border-radius: 50%;
   animation: pulse 2s ease-in-out infinite;
 }
@@ -54,7 +54,7 @@
 
 /* ---- Journey Timeline ---- */
 .journey-section {
-  background: var(--gray-100);
+  background: var(--white);
   padding: 5rem 0;
   overflow: hidden;
 }
@@ -323,7 +323,7 @@
 
 /* ---- Map Section ---- */
 .map-section {
-  background: var(--black);
+  background: var(--orange-dark);
   padding: 5rem 2rem;
 }
 .map-inner {
@@ -372,7 +372,7 @@
 
 /* ---- Report / Summary ---- */
 .report-section {
-  background: var(--gray-100);
+  background: var(--white);
   padding: 5rem 2rem;
 }
 .report-inner {

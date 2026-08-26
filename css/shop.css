@@ -4,7 +4,7 @@
 
 .shop-hero {
   padding: 9rem 2rem 4rem;
-  background: var(--black);
+  background: var(--orange-dark);
   color: var(--white);
   position: relative;
   overflow: hidden;
@@ -13,7 +13,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 80% 50%, rgba(204,85,0,0.15) 0%, transparent 70%);
+  background: radial-gradient(ellipse at 80% 50%, rgba(204,85,0,0.3) 0%, transparent 70%);
   pointer-events: none;
 }
 .shop-hero-inner {
@@ -22,13 +22,14 @@
   position: relative;
   z-index: 1;
 }
-.shop-hero-inner .eyebrow { margin-bottom: 1rem; display: block; }
+.shop-hero-inner .eyebrow { margin-bottom: 1rem; display: block; color: rgba(255,255,255,0.65); }
 .shop-hero-inner h1 { color: var(--white); margin-bottom: 1rem; }
 .shop-hero-inner p { color: rgba(255,255,255,0.6); max-width: 500px; }
 
 /* ---- Product Detail ---- */
 .shop-main {
   padding: 5rem 2rem;
+  background: var(--white);
 }
 .shop-inner {
   max-width: var(--max-width);
