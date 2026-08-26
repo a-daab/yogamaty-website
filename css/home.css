@@ -42,6 +42,7 @@
 
 .hero-content h1 {
   color: var(--white);
+  font-size: clamp(1.875rem, 4.5vw, 3.75rem);
   margin-bottom: 1.5rem;
   opacity: 0;
   animation: fadeUp 1s ease 0.5s forwards;
