@@ -15,6 +15,7 @@
   --gray-600: #555555;
   --gray-800: #222222;
   --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-heading: 'Avenir Next', 'Avenir', 'Century Gothic', 'Trebuchet MS', sans-serif;
   --font-sans: 'Inter', system-ui, sans-serif;
   --transition: 0.3s ease;
   --max-width: 1200px;
@@ -38,9 +39,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* ---- Typography ---- */
 h1, h2, h3, h4, h5 {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
+  font-weight: 300;
   line-height: 1.2;
-  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
 }
 
 h1 { font-size: clamp(2.5rem, 6vw, 5rem); }
