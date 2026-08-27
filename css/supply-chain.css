@@ -5,7 +5,7 @@
 .sc-hero {
   position: relative;
   padding: 10rem 2rem 5rem;
-  background: var(--orange-dark);
+  background: #0a0a0a;
   color: var(--white);
   overflow: hidden;
 }
@@ -13,7 +13,7 @@
   position: absolute;
   inset: -20%;
   background:
-    linear-gradient(135deg, rgba(100,30,0,0.92) 0%, rgba(163,68,0,0.5) 100%),
+    linear-gradient(135deg, rgba(0,0,0,0.92) 0%, rgba(10,4,0,0.55) 100%),
     url('assets/images/nepal-weaving.jpg') center/cover no-repeat;
   will-change: transform;
 }
@@ -23,7 +23,7 @@
   max-width: var(--max-width);
   margin: 0 auto;
 }
-.sc-hero-content .eyebrow { margin-bottom: 1rem; display: block; color: rgba(255,255,255,0.65); }
+.sc-hero-content .eyebrow { margin-bottom: 1rem; display: block; color: var(--orange); }
 .sc-hero-content h1 { color: var(--white); margin-bottom: 1rem; }
 .sc-hero-content p { color: rgba(255,255,255,0.7); font-size: 1.15rem; max-width: 580px; }
 
@@ -323,7 +323,7 @@
 
 /* ---- Map Section ---- */
 .map-section {
-  background: var(--orange-dark);
+  background: #0a0a0a;
   padding: 5rem 2rem;
 }
 .map-inner {

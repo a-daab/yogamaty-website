@@ -1,6 +1,6 @@
 /* ============================================
    YogaMaty — Main Stylesheet
-   Colors: #cc5500 (burnt orange), #fff, #0a0a0a
+   Colors: #cc5500 (burnt orange accent), #0a0a0a, #ffffff
 ============================================ */
 
 :root {
@@ -27,8 +27,8 @@ html { scroll-behavior: smooth; font-size: 16px; }
 
 body {
   font-family: var(--font-sans);
-  background: var(--orange);
-  color: var(--orange-dark);
+  background: var(--white);
+  color: var(--black);
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -59,7 +59,7 @@ p { font-size: 1rem; line-height: 1.75; color: var(--gray-600); }
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--black);
+  color: var(--orange);
 }
 
 /* ---- Buttons ---- */
@@ -78,37 +78,41 @@ p { font-size: 1rem; line-height: 1.75; color: var(--gray-600); }
   cursor: pointer;
 }
 
+/* Orange — warm brand CTA, works on both light and dark backgrounds */
 .btn-primary {
-  background: var(--white);
-  color: var(--orange);
-  border: 2px solid var(--white);
+  background: var(--orange);
+  color: var(--white);
+  border: 2px solid var(--orange);
 }
 .btn-primary:hover {
-  background: rgba(255,255,255,0.9);
-  border-color: rgba(255,255,255,0.9);
+  background: var(--orange-dark);
+  border-color: var(--orange-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 24px rgba(204,85,0,0.35);
 }
 
+/* White outline — for dark section backgrounds */
 .btn-outline {
   background: transparent;
   color: var(--white);
-  border: 2px solid var(--white);
+  border: 2px solid rgba(255,255,255,0.55);
 }
 .btn-outline:hover {
   background: var(--white);
-  color: var(--orange);
+  color: var(--black);
+  border-color: var(--white);
   transform: translateY(-2px);
 }
 
+/* Black outline — for light section backgrounds */
 .btn-outline-dark {
   background: transparent;
-  color: var(--white);
-  border: 2px solid rgba(255,255,255,0.6);
+  color: var(--black);
+  border: 2px solid var(--black);
 }
 .btn-outline-dark:hover {
-  background: var(--white);
-  color: var(--orange);
+  background: var(--black);
+  color: var(--white);
   transform: translateY(-2px);
 }
 
@@ -123,14 +127,14 @@ p { font-size: 1rem; line-height: 1.75; color: var(--gray-600); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(163,68,0,0.97);
+  background: rgba(10,10,10,0.97);
   backdrop-filter: blur(8px);
   transition: background 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease;
 }
 
 .nav.scrolled {
-  background: var(--orange-dark);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+  background: #0a0a0a;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.4);
   padding: 0.875rem 2rem;
 }
 
@@ -141,7 +145,7 @@ p { font-size: 1rem; line-height: 1.75; color: var(--gray-600); }
   color: var(--white);
   letter-spacing: 0.02em;
 }
-.nav-logo span { color: rgba(255,255,255,0.75); }
+.nav-logo span { color: var(--orange); }
 
 .nav-links {
   display: flex;
@@ -151,7 +155,7 @@ p { font-size: 1rem; line-height: 1.75; color: var(--gray-600); }
 }
 
 .nav-links a {
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.7);
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -162,12 +166,12 @@ p { font-size: 1rem; line-height: 1.75; color: var(--gray-600); }
 
 .nav-cta {
   padding: 0.6rem 1.4rem;
-  background: var(--white);
-  color: var(--orange) !important;
+  background: var(--orange);
+  color: var(--white) !important;
   border-radius: 2px;
   font-weight: 700;
 }
-.nav-cta:hover { background: rgba(255,255,255,0.9); color: var(--orange-dark) !important; }
+.nav-cta:hover { background: var(--orange-dark); color: var(--white) !important; }
 
 .nav-toggle {
   display: none;
@@ -182,6 +186,37 @@ p { font-size: 1rem; line-height: 1.75; color: var(--gray-600); }
   height: 2px;
   background: var(--white);
   transition: var(--transition);
+}
+
+/* ---- Marquee Strip ---- */
+.marquee-strip {
+  background: var(--orange);
+  overflow: hidden;
+  padding: 0.875rem 0;
+}
+.marquee-inner {
+  display: inline-flex;
+  align-items: center;
+  animation: marquee 40s linear infinite;
+  white-space: nowrap;
+}
+.marquee-inner span {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--white);
+  padding: 0 1.5rem;
+  flex-shrink: 0;
+}
+.marquee-inner .marquee-dot {
+  color: rgba(255,255,255,0.35);
+  padding: 0 0.25rem !important;
+  letter-spacing: 0;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* ---- Section Layout ---- */
@@ -209,8 +244,8 @@ p { font-size: 1rem; line-height: 1.75; color: var(--gray-600); }
 
 /* ---- Footer ---- */
 .footer {
-  background: var(--orange-dark);
-  color: rgba(255,255,255,0.65);
+  background: #0a0a0a;
+  color: rgba(255,255,255,0.6);
   padding: 4rem 2rem 2rem;
 }
 .footer-inner {
@@ -226,7 +261,7 @@ p { font-size: 1rem; line-height: 1.75; color: var(--gray-600); }
   margin-bottom: 2rem;
 }
 .footer-brand .nav-logo { margin-bottom: 1rem; }
-.footer-brand p { font-size: 0.875rem; line-height: 1.7; color: rgba(255,255,255,0.5); max-width: 280px; }
+.footer-brand p { font-size: 0.875rem; line-height: 1.7; color: rgba(255,255,255,0.45); max-width: 280px; }
 .footer-col h5 {
   color: var(--white);
   font-family: var(--font-sans);
@@ -240,7 +275,7 @@ p { font-size: 1rem; line-height: 1.75; color: var(--gray-600); }
 .footer-col ul li { margin-bottom: 0.625rem; }
 .footer-col ul li a {
   font-size: 0.875rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.45);
   transition: color var(--transition);
 }
 .footer-col ul li a:hover { color: var(--white); }
@@ -250,8 +285,8 @@ p { font-size: 1rem; line-height: 1.75; color: var(--gray-600); }
   align-items: center;
   font-size: 0.8rem;
 }
-.footer-bottom a { color: rgba(255,255,255,0.85); }
-.footer-trademark { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+.footer-bottom a { color: rgba(255,255,255,0.8); }
+.footer-trademark { font-size: 0.75rem; color: rgba(255,255,255,0.25); }
 
 /* ---- Reveal Animations ---- */
 .reveal {
@@ -281,7 +316,7 @@ p { font-size: 1rem; line-height: 1.75; color: var(--gray-600); }
     flex-direction: column;
     position: fixed;
     inset: 0;
-    background: var(--orange-dark);
+    background: #0a0a0a;
     align-items: center;
     justify-content: center;
     gap: 2rem;
