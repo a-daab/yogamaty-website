@@ -3,6 +3,14 @@
    Colors: #cc5500 (burnt orange accent), #0a0a0a, #ffffff
 ============================================ */
 
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../assets/fonts/avenir-light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --orange: #cc5500;
   --orange-light: #e06620;
